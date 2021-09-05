@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 /*--Comparando os códigos--*/
 // TS
-=======
-/*--somador.ts--*/
-
->>>>>>> 02b863a5d84f73fa86ed9e150c4f7ab5732905dd
 class Somador {
    public somar(numero1: number, numero2: number) {
       return numero1 + numero2
@@ -13,7 +8,6 @@ class Somador {
 
 let somador = new Somador()
 
-<<<<<<< HEAD
 console.log(somador.somar(10, 5))
 
 //JS
@@ -42,8 +36,3 @@ let boasVindas = new BoasVindas()
 //objetos começam com letra maiúscula (BoasVindas)
 
 console.log(boasVindas.mensagem('Giovana'))
-
-//! parei nos 55min
-=======
-console.log(somador.somar(10, 5))
->>>>>>> 02b863a5d84f73fa86ed9e150c4f7ab5732905dd
