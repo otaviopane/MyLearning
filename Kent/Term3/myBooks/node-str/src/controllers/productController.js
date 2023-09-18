@@ -60,5 +60,15 @@ exports.put = (req, res, next) => {
 };
 
 exports.delete = (req, res, next) => {
-    res.status(200).send(req.body);
+    Product
+        .findOneAndRemove(
+            req.params.id,
+        ).then(x => {
+            res.status(200).send({ message: 'Removed successfully!' });
+        }).catch(e => {
+            res.status(400).send({
+                message: 'Failed to remove',
+                data: e
+            });
+        });
 };
