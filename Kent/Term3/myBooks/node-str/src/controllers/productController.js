@@ -11,7 +11,7 @@ exports.get = (req, res, next) => {
         }).catch(e => {
             res.status(400).send(e);
         });
-}
+};
 
 exports.getById = (req, res, next) => {
     Product
@@ -23,7 +23,7 @@ exports.getById = (req, res, next) => {
         }).catch(e => {
             res.status(400).send(e);
         });
-}
+};
 
 exports.post = (req, res, next) => {
     var product = new Product(req.body);
@@ -40,11 +40,23 @@ exports.post = (req, res, next) => {
 };
 
 exports.put = (req, res, next) => {
-    const id = req.params.id;
-    res.status(200).send({
-        id: id,
-        item: req.body
-    });
+    Product
+        .findOneAndUpdate({
+            id: req.params.id,
+        }, {
+            $set: {
+                description: req.body.description,
+                costInDollars: req.body.costInDollars,
+                complete: req.body.complete
+            }
+        }).then(x => {
+            res.status(200).send({ message: 'Updated successfully!' });
+        }).catch(e => {
+            res.status(400).send({
+                message: 'Failed to update',
+                data: e
+            });
+        });
 };
 
 exports.delete = (req, res, next) => {
