@@ -2,11 +2,14 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 const router = express.Router();
 
-// Routes
+
+const Product = require('./models/product')
+
 const indexRoute = require('./routes/indexRoute')
 const productRoute = require('./routes/productRoute')
 
