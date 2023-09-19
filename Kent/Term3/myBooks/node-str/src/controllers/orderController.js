@@ -43,6 +43,7 @@ exports.post = (req, res, next) => {
 };
 
 exports.put = (req, res, next) => {
+    var order = new Order(req.body);
     Order
         .findOneAndUpdate({
             id: req.params.id,
@@ -53,7 +54,7 @@ exports.put = (req, res, next) => {
                 complete: req.body.complete
             }
         }).then(x => {
-            res.status(200).send({ message: 'Updated successfully!' });
+            res.status(200).send({ message: 'Updated successfully!', order });
         }).catch(e => {
             res.status(404).send({
                 message: 'Failed to update, resource does not exist',
@@ -63,11 +64,12 @@ exports.put = (req, res, next) => {
 };
 
 exports.delete = (req, res, next) => {
+    var order = new Order(req.body);
     Order
         .findOneAndRemove(
-            req.params.id,
-        ).then(x => {
-            res.status(204).send({ message: 'Removed successfully!' });
+            req.params.id
+        ).then(data => {
+            res.status(204).send({ message: 'Removed successfully!', data });
         }).catch(e => {
             res.status(404).send({
                 message: 'Failed to remove',
