@@ -1,10 +1,10 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const Product = mongoose.model('Product');
+const Order = mongoose.model('Order');
 
 exports.get = (req, res, next) => {
-    Product
+    Order
         .find({}, 'id description costInDollars complete')
         .then(data => {
             res.status(200).send(data);
@@ -14,23 +14,26 @@ exports.get = (req, res, next) => {
 };
 
 exports.getById = (req, res, next) => {
-    Product
+    Order
         .findOne({
             id: req.params.id,
         }, 'description costInDollars complete')
         .then(data => {
             res.status(200).send(data);
         }).catch(e => {
-            res.status(400).send(e);
+            res.status(400).send({
+                message: 'Failed to find, resource does not exist',
+                e
+            });
         });
 };
 
 exports.post = (req, res, next) => {
-    var product = new Product(req.body);
-    product
+    var order = new Order(req.body);
+    order
         .save()
         .then(x => {
-            res.status(201).send({ message: 'Registered successfully!' });
+            res.status(201).send({ message: 'Registered successfully!', order });
         }).catch(e => {
             res.status(400).send({
                 message: 'Failed to register',
@@ -40,7 +43,7 @@ exports.post = (req, res, next) => {
 };
 
 exports.put = (req, res, next) => {
-    Product
+    Order
         .findOneAndUpdate({
             id: req.params.id,
         }, {
@@ -52,21 +55,21 @@ exports.put = (req, res, next) => {
         }).then(x => {
             res.status(200).send({ message: 'Updated successfully!' });
         }).catch(e => {
-            res.status(400).send({
-                message: 'Failed to update',
+            res.status(404).send({
+                message: 'Failed to update, resource does not exist',
                 data: e
             });
         });
 };
 
 exports.delete = (req, res, next) => {
-    Product
+    Order
         .findOneAndRemove(
             req.params.id,
         ).then(x => {
-            res.status(200).send({ message: 'Removed successfully!' });
+            res.status(204).send({ message: 'Removed successfully!' });
         }).catch(e => {
-            res.status(400).send({
+            res.status(404).send({
                 message: 'Failed to remove',
                 data: e
             });
