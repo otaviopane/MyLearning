@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Contact Us | TeaTime E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/tea_logo.png" alt="Tea Time Logo" class="logo">
+    </header>
+    <nav>
+        <ul class="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+        <div class="search-area">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+    </nav>
+    <main>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Whether you have a question about our products, need assistance, or just want to give feedback, please reach out.</p>
+        <section class="contact-section">
+            <article class="contact-form-art">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form" action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="2" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="contact-details">
+            <article class="contact-details">
+                <h2>Our Details</h2>
+                <address>
+                    <p><strong>TeaTime E-commerce</strong></p>
+                    <p>123 Tea St.</p>
+                    <p>Melbourne, VIC 3000</p>
+                    <p>Australia</p>
+                    <p><strong>Phone:</strong> +61 2 1234 5678</p>
+                    <p><strong>Email:</strong> info@teaecommerce.com.au</p>
+                </address>
+            </article>
+        </section>
+    </main>
+<footer>
+    <img src="img/power_computer.jpg" alt="Power ForceLogo" class="logo">
+    <p>&copy; Computer Force - Otavio Pane 2023 </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Sofia&display=swap');
+/* #D4C487, #87A5D4, #384354, #544738, #544E38 */
+
+* {
+    font-family: 'Handlee', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.intro {
+    text-align: center;
+}
+
+.featured-products {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.product-categories {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.product {
+    border: 1px solid #eee;
+    padding: 15px;
+    box-shadow: 5px 0 5px -5px #161a21;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.product-listing-columns {
+    display: flex;
+}
+
+.product-listing-columns .product-listing {
+    margin: 10px;
+    background-image: linear-gradient(180deg, rgba(189, 216, 255, 0.3), hsla(30, 100%, 87%, 0.3));
+    box-shadow: 5px 0 5px -5px #161a21;
+    width: 50%;
+}
+
+.product-listing-columns .product-item {
+    padding: 10px;
+    min-height: 250px;
+}
+
+.product-listing-single-column .product-listing {
+    margin: 10px;
+    background-image: linear-gradient(180deg, rgba(189, 216, 255, 0.3), hsla(30, 100%, 87%, 0.3));
+    box-shadow: 5px 0 5px -5px #161a21;
+    width: 50%;
+    margin: auto;
+}
+
+.contact-form {
+    background-image: linear-gradient(180deg, rgba(189, 216, 255, 0.3), hsla(30, 100%, 87%, 0.3));
+    width: 30%;
+    display: block;
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: inset 0 5px -5px #161a21;
+    text-align: left;
+    border-radius: 10px;
+    margin: auto;
+}
+
+form div {
+    margin: 10px 0;
+}
+
+form div label {
+    text-align: left;
+}
+
+form div input {
+    width: 100%;
+}
+
+form div textarea {
+    width: 100%;
+}
+
+.product:hover {
+    background-image: linear-gradient(180deg, rgba(189, 216, 255, 0.3), hsla(30, 100%, 87%, 0.3));
+}
+
+.about-us-preview {
+    background-color: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+}
+
+.menu-links .active {
+    color: #D4C487;
+}
+
+body {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(180deg, rgba(189, 216, 255, 0.3), hsla(30, 100%, 87%, 0.3));
+    background-attachment: scroll;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+    background-color: #384355;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flexbox;
+}
+
+section {
+    box-shadow: 5px 0 5px -5px #161a21;
+    background-color: #fff;
+    color: #000;
+    padding: 2%;
+    border-radius: 10px;
+    margin: 3% 0;
+}
+
+.ethos,
+.milestones {
+    padding-left: 5%;
+}
+
+article {
+    text-align: center;
+}
+
+h1 {
+    margin: 0.5em 0;
+    font-family: 'Sofia', cursive;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 1px 1px 2px #384355bd;
+}
+
+h2 {
+    margin: 0.5em 0;
+    font-family: 'Sofia', cursive;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 1px 1px 2px #384355bd;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid #384354;
+}
+
+button:hover {
+    background-color: #87A5D4;
+    font-weight: bolder;
+    border: 2px solid #544738;
+
+}
+
+
+footer .logo {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-top: 30px;
+    display: inline;
+}
+
+
+footer p {
+    text-align: center;
+    margin: 1% 0;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin: 10px;
+}
+
+#video {
+    border-radius: 5%;
+    margin: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 5rem;
+    font-size: 1.3em;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #161a21;
+    display: flex;
+    align-items: center;
+}
+
+.menu-links {
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+.menu-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search-area {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+
+}
+
+.search-area input {
+    width: 200px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    width: 100%;
+}
+
+main {
+    height: auto;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+p {
+    text-align: center;
+    margin: 3% 0;
+}
+
+.job-detail {
+    text-align: center;
+    margin: 3% 0;
+}
+
+ul {
+    list-style-type: none
+}
+
+aside {
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15em 20px;
+    box-shadow: 5px 0 5px -5px #161a21;
+}
+
+aside table {
+    background-image: linear-gradient(180deg, rgba(189, 216, 255, 0.3), hsla(30, 100%, 87%, 0.3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+    padding: 15px;
+    box-shadow: inset 0 5px -5px #161a21;
+    text-align: center;
+    border-radius: 10px;
+}
+
+td {
+    display: block;
+    padding: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #384355;
+    color: #fff;
+}
+
+audio {
+    margin: 20px;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        font-size: 1em;
+    }
+
+    aside {
+        width: 90%;
+        margin: 3%;
+        padding: 2%;
+    }
+
+    .featured-products,
+    .product-categories {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .product {
+        width: 90%;
+        margin: 3%;
+        padding: 2%;
+    }
+}
